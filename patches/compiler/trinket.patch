@@ -1,0 +1,26 @@
+diff --git a/build/core/vendor/qcom_boards.mk b/build/core/vendor/qcom_boards.mk
+index 1ec27814..4379e54e 100644
+--- a/build/core/vendor/qcom_boards.mk
++++ b/build/core/vendor/qcom_boards.mk
+@@ -7,7 +7,7 @@ LITO := lito #SM7250
+ BENGAL := bengal #SM6115
+ MSMNILE := msmnile #SM8150
+ MSMSTEPPE := sm6150
+-TRINKET := trinket #SM6125
++TRINKET := sm6125
+ ATOLL := atoll #SM6250
+ 
+ # A Family
+diff --git a/config/BoardConfigQcom.mk b/config/BoardConfigQcom.mk
+index 69f7a99b..5ff5d72e 100644
+--- a/config/BoardConfigQcom.mk
++++ b/config/BoardConfigQcom.mk
+@@ -4,7 +4,7 @@ LITO := lito #SM7250
+ BENGAL := bengal #SM6115
+ MSMNILE := msmnile #SM8150
+ MSMSTEPPE := sm6150
+-TRINKET := trinket #SM6125
++TRINKET := sm6125
+ ATOLL := atoll #SM6250
+ 
+ B_FAMILY := msm8226 msm8610 msm8974

@@ -183,6 +183,8 @@ enter_aosp_dir vendor/lineage
 # Change-Id: Id14b2482f4c633f529046b485c6ac16fcd28c45f
 # apply_gerrit_cl_commit refs/changes/50/278350/1 2668f66d273003497be819cc13084502cfc2d124 # fatal: couldn't find remote ref refs/changes/50/278350/1
 git fetch "https://github.com/LineageOS/android_vendor_lineage" refs/changes/50/278350/1 && git cherry-pick FETCH_HEAD
+# apply local patch files, as there is no remote repo to fetch them from
+git apply --reject $ANDROOT/vendor/oss/repo_update/patches/compiler/trinket.patch || true
 popd
 
 enter_aosp_dir frameworks/base
