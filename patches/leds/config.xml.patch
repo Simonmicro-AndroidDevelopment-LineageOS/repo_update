@@ -1,0 +1,13 @@
+diff --git a/lineage/res/res/values/config.xml b/lineage/res/res/values/config.xml
+index 0d950f36..a39baeae 100644
+--- a/lineage/res/res/values/config.xml
++++ b/lineage/res/res/values/config.xml
+@@ -95,7 +95,7 @@
+ 
+          For example, a device with notification and battery lights that supports
+          pulsating and RGB control would set this config to 75. -->
+-    <integer name="config_deviceLightCapabilities">8</integer>
++    <integer name="config_deviceLightCapabilities">3</integer>
+ 
+     <!-- Defines external services to be started by the LineageSystemServer at boot. The service itself
+          should publish as a binder services in its onStart -->

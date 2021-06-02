@@ -201,7 +201,14 @@ enter_aosp_dir packages/apps/Updater/res/values
 # Yes, this is bad practice - BUT this is a xml patch and only needed for LOS17.1,
 # as only in this release the xml overlay is broken. Also I do not plan to fork the
 # whole updater package for just one xml "overlay".
-git apply --reject $ANDROOT/vendor/oss/repo_update/patches/ota/strings.patch || true
+git apply --reject $ANDROOT/vendor/oss/repo_update/patches/ota/strings.xml.patch || true
+popd
+
+enter_aosp_dir lineage-sdk/lineage/res/res/values/
+# Yes, this is bad practice - BUT this is a xml patch and only needed for LOS17.1,
+# as only in this release the xml overlay is broken. Also I do not plan to fork the
+# whole updater package for just one xml "overlay".
+git apply --reject $ANDROOT/vendor/oss/repo_update/patches/leds/config.xml.patch || true
 popd
 
 ######## SODP CHANGES ########
