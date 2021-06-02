@@ -197,6 +197,13 @@ enter_aosp_dir frameworks/base
 git fetch "https://github.com/LineageOS/android_frameworks_base" refs/changes/19/272919/1 && git cherry-pick FETCH_HEAD
 popd
 
+enter_aosp_dir packages/apps/Updater/res/values
+# Yes, this is bad practice - BUT this is a xml patch and only needed for LOS17.1,
+# as only in this release the xml overlay is broken. Also I do not plan to fork the
+# whole updater package for just one xml "overlay".
+git apply --reject $ANDROOT/vendor/oss/repo_update/patches/ota/strings.patch || true
+popd
+
 ######## SODP CHANGES ########
 
 # N/A
